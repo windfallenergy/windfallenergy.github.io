@@ -18,10 +18,9 @@
             font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
             max-width: 1200px;
-            margin: 0 auto;
         }
 
         header {
@@ -29,54 +28,56 @@
             background-color: var(--brand-color);
         }
 
-        h1 {
+        h1, h2 {
             font-family: 'Merriweather', serif;
+            color: var(--text-color);
+        }
+
+        h1 {
             font-size: 2.5rem;
             margin: 0;
         }
 
-        h2 {
-            font-family: 'Merriweather', serif;
-            color: var(--text-color);
-            margin-top: 2rem;
+        .section {
+            padding: 2rem;
         }
 
         .mission {
-            padding: 2rem;
             background-color: var(--bg-grey);
             margin: 2rem 0;
         }
 
         .launch-announcement {
-            padding: 2rem;
             text-align: center;
             border-bottom: 2px solid var(--brand-color);
-            margin-bottom: 2rem;
         }
 
         .launch-announcement h2 {
-            font-family: 'Merriweather', serif;
             margin-top: 0;
         }
 
-        .product-section {
-            padding: 2rem;
+        .speak-with-us {
+            text-align: center;
+            background-color: var(--bg-grey);
         }
 
-        .product-card {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            border-left: 4px solid var(--brand-color);
-            background-color: white;
+        .speak-with-us a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--brand-color);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: opacity 0.2s ease;
         }
 
-        .product-card h3 {
-            font-family: 'Merriweather', serif;
-            margin-top: 0;
+        .speak-with-us a:hover {
+            opacity: 0.9;
         }
 
         footer {
-            padding: 2rem;
             text-align: center;
             background-color: var(--bg-grey);
             margin-top: 2rem;
@@ -88,16 +89,22 @@
         <h1>Windfall Energy</h1>
     </header>
 
-    <div class="mission">
+    <div class="section mission">
         <p>Allow all homes to make use of the abundant renewable energy on the grid. Using more energy at times when it's clean and cheap, and using fewer fossil fuels.</p>
     </div>
 
-    <div class="launch-announcement">
+    <div class="section launch-announcement">
         <h2>Coming Soon</h2>
         <p>We're launching in early 2025. Join our waitlist and pre-order opportunities opening soon.</p>
     </div>
 
-    <footer>
+    <div class="section speak-with-us">
+        <h2>Speak with Us</h2>
+        <p>Want to learn more about using cleaner energy in your home? Book a call with our team to discuss</p>
+        <a href="https://cal.com/ashley-grealish/30min" target="_blank">Schedule a 30-minute call</a>
+    </div>
+
+    <footer class="section">
         <p>© 2024 Windfall Energy</p>
     </footer>
 </body>
