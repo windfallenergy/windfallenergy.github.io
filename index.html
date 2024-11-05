@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windfall Energy - Smart Energy for Every Home</title>
     <style>
+        /* WindfallCSS Framework */
+
         @font-face {
             font-family: 'Merriweather';
             src: url('fonts/Merriweather-Bold.ttf') format('truetype');
@@ -12,97 +14,262 @@
             font-style: normal;
         }
 
+        /* Reset and Base Styles */
+        :root {
+          --primary-color: #f2ca00;
+          --text-color: #000;
+          --background-color: #fff;
+          --border-color: #000;
+          --font-main: monospace;
+          --font-heading: 'Merriweather', serif;
+        }
+
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
         body {
-            font-family: monospace;
-            line-height: 1.6;
-            color: #000;
-            background-color: #fff;
-            margin: 0;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+          font-family: var(--font-main);
+          line-height: 1.6;
+          color: var(--text-color);
+          background-color: var(--background-color);
         }
 
-        header {
-            border-bottom: 5px solid #f2ca00;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+          font-family: var(--font-heading);
+          margin-bottom: 0.5em;
         }
 
-        h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 24px;
-            margin: 0;
+        h1 { font-size: 2em; }
+        h2 { font-size: 1.5em; }
+        h3 { font-size: 1.17em; }
+
+        p { margin-bottom: 1em; }
+
+        /* Layout */
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px 0;
         }
 
+        /* Header */
+        .header {
+          border-bottom: 5px solid var(--primary-color);
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .header h1 {
+          margin-bottom: 0;
+          text-transform: uppercase;
+          font-size: 24px;
+        }
+
+        /* Footer */
+        .footer {
+          margin-top: 30px;
+          border-top: 5px solid var(--primary-color);
+          padding-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        #copyright {
+          text-transform: uppercase;
+        }
+
+        /* Sections */
         .section {
-            margin-bottom: 30px;
-            border: 2px solid #000;
-            padding: 15px;
+          margin-bottom: 30px;
+          border: 2px solid var(--border-color);
+          padding: 15px;
         }
 
         .section-title {
-            background-color: #f2ca00;
-            margin: -15px -15px 15px -15px;
-            padding: 5px 15px;
-            font-weight: bold;
+          background-color: var(--primary-color);
+          margin: -15px -15px 15px -15px;
+          padding: 5px 15px;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-family: var(--font-main);
+          font-size: 0.8rem;
         }
 
+        /* Links */
         a {
-            color: #000;
-            text-decoration: none;
-            border-bottom: 2px solid #f2ca00;
+          color: var(--text-color);
+          text-decoration: none;
+          border-bottom: 2px solid var(--primary-color);
         }
 
         a:hover {
-            background-color: #f2ca00;
+          background-color: var(--primary-color);
         }
 
-        .cta {
-            display: inline-block;
-            padding: 10px;
-            background-color: #f2ca00;
-            color: #000;
-            text-transform: uppercase;
+        /* Buttons */
+        .btn {
+          display: inline-block;
+          padding: 10px;
+          background-color: var(--primary-color);
+          color: var(--text-color);
+          text-transform: uppercase;
+          font-weight: bold;
+          border: 2px solid var(--border-color);
+          cursor: pointer;
+        }
+
+        .btn:hover {
+          background-color: var(--text-color);
+          color: var(--primary-color);
+        }
+
+
+        /* Form Styles */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
             font-weight: bold;
-            border: 2px solid #000;
         }
 
-        .cta:hover {
-            background-color: #000;
-            color: #f2ca00;
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid var(--border-color);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            font-size: 1em;
         }
 
-        footer {
-            margin-top: 30px;
-            border-top: 5px solid #f2ca00;
-            padding-top: 10px;
+        input[type="submit"],
+        button[type="submit"] {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        input[type="submit"]:hover,
+        button[type="submit"]:hover {
+            background-color: var(--text-color);
+            color: var(--primary-color);
+        }
+
+        .inline-form {
+            display: flex;
+            align-items: stretch;
+            gap: 10px;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .inline-form label {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .inline-form input[type="email"] {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+
+        .inline-form button[type="submit"] {
+            align-self: flex-end;
+        }
+
+        .errorlist {
+            color: #ff0000;
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        .helptext {
+            display: block;
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+          .container {
+            padding: 10px;
+          }
+
+          .footer {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .footer > div {
+            margin-bottom: 10px;
+          }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>WINDFALL ENERGY</h1>
-    </header>
+    <div class="container">
+        <header class="header">
+            <h1>Windfall Energy</h1>
+        </header>
 
-    <div class="section">
-        <div class="section-title">MISSION</div>
-        <p>Allow all homes to make use of the abundant renewable energy on the grid. Using more energy at times when it's clean and cheap, and using fewer fossil fuels.</p>
+        <div class="section">
+            <div class="section-title">MISSION</div>
+            <p>Allow all homes to make use of the abundant renewable energy on the grid. Using more energy at times when it's clean and cheap, and using fewer fossil fuels.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">COMING SOON</div>
+            <p>We're launching in early 2025, but you don't have to wait that long to get involved! We're opening for pre-orders soon.</p>
+            <form
+              action="https://formspree.io/f/xwpkoeyj"
+              method="POST"
+              class="inline-form"
+            >
+              <label>
+                Join the waitlist:
+                <input type="email" name="email" placeholder="email@address.com">
+              </label>
+              <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <div class="section-title">SPEAK WITH US</div>
+            <p>Want to learn more about reducing energy usage in your home? Book a call with our team to discuss your specific needs and how we can help. <a href="https://cal.com/ashley-grealish/30min" target="_blank" class="cta">Schedule a 30-minute call</a></p>
+
+        </div>
+
+        <footer class="footer">
+            <div id="copyright" class="footer-left">
+                <p>© 2024 Windfall Energy</p>
+            </div>
+        </footer>
     </div>
-
-    <div class="section">
-        <div class="section-title">COMING SOON</div>
-        <p>We're launching in early 2025. Join our waitlist and pre-order opportunities opening soon.</p>
-    </div>
-
-    <div class="section">
-        <div class="section-title">SPEAK WITH US</div>
-        <p>Want to learn more about reducing energy usage in your home? Book a call with our team to discuss your specific needs and how we can help.</p>
-        <a href="https://cal.com/ashley-grealish/30min" target="_blank" class="cta">Schedule a 30-minute call</a>
-    </div>
-
-    <footer>
-        <p>© 2024 WINDFALL ENERGY</p>
-    </footer>
 </body>
 </html>
