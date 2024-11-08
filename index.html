@@ -8,10 +8,24 @@
         /* WindfallCSS Framework */
 
         @font-face {
-            font-family: 'Merriweather';
-            src: url('fonts/Merriweather-Bold.ttf') format('truetype');
-            font-weight: 700;
+            font-family: 'Orelega One';
+            src: url('fonts/OrelegaOne-Regular.ttf') format('truetype');
+            font-weight: 400;
             font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto Mono';
+            src: url('fonts/RobotoMono-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto Mono';
+            src: url('fonts/RobotoMono-Italic-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 700;
+            font-style: italic;
         }
 
         /* Reset and Base Styles */
@@ -20,8 +34,8 @@
           --text-color: #000;
           --background-color: #fff;
           --border-color: #000;
-          --font-main: monospace;
-          --font-heading: 'Merriweather', serif;
+          --font-main: 'Roboto Mono', monospace;
+          --font-heading: 'Orelega One', serif;
         }
 
         * {
@@ -33,6 +47,7 @@
         body {
           font-family: var(--font-main);
           line-height: 1.6;
+          font-size: 0.8rem;
           color: var(--text-color);
           background-color: var(--background-color);
         }
@@ -53,7 +68,7 @@
         .container {
           max-width: 800px;
           margin: 0 auto;
-          padding: 20px 0;
+          padding: 15px 0;
         }
 
         /* Header */
@@ -68,8 +83,9 @@
 
         .header h1 {
           margin-bottom: 0;
-          text-transform: uppercase;
-          font-size: 24px;
+          font-size: 2rem;
+          font-weight: normal;
+          letter-spacing: 0.06rem;
         }
 
         /* Footer */
@@ -100,7 +116,6 @@
           text-transform: uppercase;
           font-weight: bold;
           font-family: var(--font-main);
-          font-size: 0.8rem;
         }
 
         /* Links */
